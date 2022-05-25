@@ -1,0 +1,11 @@
+
+{% block content %}
+    <div class="alert alert-info ">
+        <h2>you have been successfuly logged out </h2>
+    </div>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                log in again? <a class="ml-2" href="{% url 'blog:login' %}">log in</a>
+            </small>
+       
+{% endblock content %}

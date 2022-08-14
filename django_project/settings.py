@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'blog',
     'users',
+    'bootstrap_datepicker_plus',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

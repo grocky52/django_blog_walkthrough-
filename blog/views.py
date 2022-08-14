@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from . models import post
+from bootstrap_datepicker_plus.widgets import DateTimePickerInput
 from django.views.generic import CreateView, ListView, DetailView, UpdateView, DeleteView
 from .models import post
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
@@ -26,8 +27,9 @@ class postcreateview(LoginRequiredMixin, CreateView):
     model = post
     fields = ['title', 'content']
 
-    def form_valid(self, form):
-       form.instance.author = self.request.user
+    
+    def form_valid(self, form):   #called when user creates a post and data provided is valid
+       form.instance.author = self.request.user #associates  the user making the request the the author thus user been the author
        return super().form_valid(form)
 
 

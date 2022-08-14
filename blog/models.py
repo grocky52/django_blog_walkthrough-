@@ -15,7 +15,7 @@ class post(models.Model):
     def __str__(self):
         return self.title
 
-
+# used by create and update views to get back to url created and or updated by the user
     def get_absolute_url(self):
         return reverse('blog:post-detail', kwargs={'pk': self.pk})
 
